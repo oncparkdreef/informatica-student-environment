@@ -12,7 +12,7 @@
     "customizations": {
         "codespaces": {
             "repositories": {
-                "oncparkdreef/informatica-2627-jhenze-dev": {
+                "oncparkdreef/*": {
                     "permissions": {
                         "contents": "write"
                     }

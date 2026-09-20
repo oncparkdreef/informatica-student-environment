@@ -1,4 +1,4 @@
-﻿// Bestand: settings.json
+// Bestand: settings.json
 // Locatie: Informatica-2627/_baselines/weekrepo/.vscode/settings.json
 // Doel: vaste VS Code-workspace-instellingen voor Informatica
 
@@ -8,6 +8,11 @@
     // =====================================================
 
     "workbench.startupEditor": "none",
+    "workbench.editorAssociations": {
+        "START_HIER.md": "vscode.markdown.preview.editor"
+    },
+    "chat.disableAIFeatures": true,
+    "chat.agent.enabled": false,
     "workbench.colorTheme": "Default Dark Modern",
 
 
@@ -102,6 +107,7 @@
     "files.exclude": {
         "**/.git": true,
         "**/.vscode": true,
+        "**/.onc": true,
         "**/.devcontainer": true,
         "**/.venv": true,
         "**/__pycache__": true,

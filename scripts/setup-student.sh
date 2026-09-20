@@ -40,9 +40,18 @@ echo "Leerlinginstellingen plaatsen..."
 mkdir -p "${TARGET}/.vscode"
 cp "${ENV_ROOT}/config/settings.json" "${TARGET}/.vscode/settings.json"
 
+echo "Startpagina plaatsen..."
+mkdir -p "${TARGET}/.onc"
+sed "s/{{GITHUB_USER}}/${LOGIN}/g" \
+    "${ENV_ROOT}/start/START_HIER.md" \
+    > "${TARGET}/.onc/START_HIER.md"
+
 # Technische lokale bestanden nooit per ongeluk laten committen.
 grep -qxF ".vscode/" "${TARGET}/.git/info/exclude" ||
     echo ".vscode/" >> "${TARGET}/.git/info/exclude"
+
+grep -qxF ".onc/" "${TARGET}/.git/info/exclude" ||
+    echo ".onc/" >> "${TARGET}/.git/info/exclude"
 
 echo
 echo "Klaar."

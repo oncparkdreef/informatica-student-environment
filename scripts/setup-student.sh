@@ -21,6 +21,16 @@ if [ ! -d "${TARGET}/.git" ]; then
 else
     echo "Leerlingrepo bestaat al."
 fi
+echo "Terminal instellen..."
+
+if ! grep -q "ONC TERMINAL PROMPT" "${HOME}/.bashrc"; then
+    cat >> "${HOME}/.bashrc" <<'EOF'
+
+# ONC TERMINAL PROMPT
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PS1='\W > '
+EOF
+fi
 echo "Mappenstructuur controleren..."
 
 for module in 1 2 3; do

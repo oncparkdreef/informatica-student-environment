@@ -3,6 +3,11 @@
 
     "image": "mcr.microsoft.com/devcontainers/python:3.14-bookworm",
 
+    "containerEnv": {
+        "TZ": "Europe/Amsterdam",
+        "VIRTUAL_ENV_DISABLE_PROMPT": "1"
+    },
+
     "features": {
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "2.99.0"

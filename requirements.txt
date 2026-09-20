@@ -1,0 +1,5 @@
+# Bestand: requirements.txt
+# Locatie: Informatica-2627/_baselines/weekrepo/requirements.txt
+# Doel: Python-packages voor de virtual environment van deze weekrepo
+
+ipykernel

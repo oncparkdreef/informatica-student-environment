@@ -1,0 +1,191 @@
+﻿// Bestand: settings.json
+// Locatie: Informatica-2627/_baselines/weekrepo/.vscode/settings.json
+// Doel: vaste VS Code-workspace-instellingen voor Informatica
+
+{
+    // =====================================================
+    // GENERAL
+    // =====================================================
+
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Dark Modern",
+
+
+    // =====================================================
+    // EDITOR
+    // =====================================================
+
+    // Font & layout
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": false,
+
+    // Indentation
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.autoIndent": "advanced",
+
+    // Wrapping & formatting
+    "editor.wordWrap": "off",
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+
+    // Cursor & scrolling
+    "editor.cursorBlinking": "blink",
+    "editor.cursorSmoothCaretAnimation": "off",
+    "editor.smoothScrolling": false,
+    "editor.mouseWheelZoom": false,
+
+    // Visuals
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "selection",
+    "editor.renderControlCharacters": false,
+    "editor.guides.indentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.occurrencesHighlight": true,
+    "editor.selectionHighlight": true,
+    "editor.matchBrackets": "always",
+    "editor.bracketPairColorization.enabled": true,
+
+    // Folding
+    "editor.folding": true,
+    "editor.showFoldingControls": "always",
+    "editor.stickyScroll.enabled": false,
+
+    // Hover & actions
+    "editor.hover.enabled": false,
+    "editor.lightbulb.enabled": "off",
+    "editor.codeLens": false,
+
+    // Suggestions & autocomplete
+    "editor.inlineSuggest.enabled": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.tabCompletion": "off",
+    "editor.parameterHints.enabled": true,
+
+    // Editing
+    "editor.dragAndDrop": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.copyWithSyntaxHighlighting": true,
+
+    // Brackets & quotes
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingOvertype": "always",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "languageDefined",
+    "editor.linkedEditing": true,
+
+
+    // =====================================================
+    // FILES
+    // =====================================================
+
+    // Saving
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+
+    // Cleanup
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": false,
+
+    // Technische bestanden verbergen voor leerlingen
+    "files.exclude": {
+        "**/.git": true,
+        "**/.vscode": true,
+        "**/.devcontainer": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.ipynb_checkpoints": true,
+        "**/.gitignore": true,
+        "**/.gitkeep": true,
+        "**/requirements.txt": true
+    },
+
+
+    // =====================================================
+    // EXPLORER
+    // =====================================================
+
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": true,
+    "explorer.sortOrder": "default",
+    "explorer.decorations.badges": true,
+    "explorer.decorations.colors": true,
+    "explorer.openEditors.visible": 0,
+
+
+    // =====================================================
+    // TERMINAL
+    // =====================================================
+
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.enableMultiLinePasteWarning": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.smoothScrolling": false,
+
+
+    // =====================================================
+    // PYTHON
+    // =====================================================
+
+    // Environment
+    "python.terminal.activateEnvironment": true,
+        "python.defaultInterpreterPath": "/workspaces/informatica-student-environment/.venv/bin/python",
+    "python.createEnvironment.trigger": "off",
+
+    // Pylance analysis
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.indexing": true,
+    "python.analysis.useLibraryCodeForTypes": false,
+    "python.analysis.logLevel": "Error",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.completeFunctionParens": false,
+
+    // Inlay hints
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.inlayHints.functionReturnTypes": false,
+
+    // Excludes
+    "python.analysis.exclude": [
+        "**/__pycache__",
+        "**/.venv"
+    ],
+
+    // Python tools
+    "python.languageServer": "Pylance",
+    "python.REPL.enableREPLSmartSend": false,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.experiments.enabled": false,
+
+
+    // =====================================================
+    // GIT
+    // =====================================================
+
+    "git.enabled": true,
+    "git.autofetch": false,
+    "git.confirmSync": true,
+    "git.openRepositoryInParentFolders": "never"
+}
+

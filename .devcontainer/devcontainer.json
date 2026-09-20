@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "ONC Informatica",
 
     "image": "mcr.microsoft.com/devcontainers/python:3.14-bookworm",
@@ -12,7 +12,7 @@
     "customizations": {
         "codespaces": {
             "repositories": {
-                "oncparkdreef/*": {
+                "oncparkdreef/informatica-2627-jhenze-dev": {
                     "permissions": {
                         "contents": "write"
                     }

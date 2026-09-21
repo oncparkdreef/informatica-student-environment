@@ -46,6 +46,24 @@ fi
 
 "${ENV_ROOT}/.venv/bin/python" -m pip install -r "${ENV_ROOT}/requirements.txt"
 
+echo "Get-commando installeren..."
+mkdir -p "${HOME}/.local/bin"
+
+cat > "${HOME}/.local/bin/get" <<EOF
+#!/usr/bin/env bash
+exec "${ENV_ROOT}/.venv/bin/python" "${ENV_ROOT}/scripts/get.py" "\$@"
+EOF
+
+chmod +x "${HOME}/.local/bin/get"
+
+if ! grep -q "ONC LOCAL BIN" "${HOME}/.bashrc"; then
+    cat >> "${HOME}/.bashrc" <<'EOF'
+
+# ONC LOCAL BIN
+export PATH="${HOME}/.local/bin:${PATH}"
+EOF
+fi
+
 echo "Leerlinginstellingen plaatsen..."
 mkdir -p "${TARGET}/.vscode"
 cp "${ENV_ROOT}/config/settings.json" "${TARGET}/.vscode/settings.json"

@@ -138,7 +138,6 @@
 
     "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.defaultProfile.linux": "bash",
-    "terminal.integrated.cwd": "${workspaceFolder}",
     "terminal.integrated.confirmOnExit": "hasChildProcesses",
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.enableMultiLinePasteWarning": true,

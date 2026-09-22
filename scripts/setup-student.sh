@@ -3,11 +3,12 @@
 set -euo pipefail
 
 ORG="oncparkdreef"
-ENV_ROOT="/workspaces/informatica-student-environment"
+ENV_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+WORKSPACE_ROOT="$(dirname "${ENV_ROOT}")"
 
 LOGIN="$(gh api user --jq .login)"
 REPO="informatica-2627-${LOGIN}"
-TARGET="/workspaces/${REPO}"
+TARGET="${WORKSPACE_ROOT}/${REPO}"
 
 echo
 echo "ONC Informatica"
@@ -67,6 +68,7 @@ fi
 echo "Leerlinginstellingen plaatsen..."
 mkdir -p "${TARGET}/.vscode"
 cp "${ENV_ROOT}/config/settings.json" "${TARGET}/.vscode/settings.json"
+sed -i "s|/workspaces/informatica-student-environment|${ENV_ROOT}|g" "${TARGET}/.vscode/settings.json"
 
 echo "Startpagina plaatsen..."
 mkdir -p "${TARGET}/.onc"

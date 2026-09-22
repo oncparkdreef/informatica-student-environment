@@ -2,10 +2,11 @@
 
 set -euo pipefail
 
-ENV_ROOT="/workspaces/informatica-student-environment"
+ENV_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+WORKSPACE_ROOT="$(dirname "${ENV_ROOT}")"
 
 LOGIN="$(gh api user --jq .login)"
-TARGET="/workspaces/informatica-2627-${LOGIN}"
+TARGET="${WORKSPACE_ROOT}/informatica-2627-${LOGIN}"
 START_PAGE="${TARGET}/.onc/START_HIER.md"
 
 if [ -d "${TARGET}/.git" ]; then

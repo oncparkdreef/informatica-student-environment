@@ -13,7 +13,7 @@
     },
     "chat.disableAIFeatures": true,
     "chat.agent.enabled": false,
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Dark Modern",
 
 
     // =====================================================

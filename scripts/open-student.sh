@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+echo "Wachten tot VS Code volledig is opgestart..."
+sleep 5
+
 LOGIN="$(gh api user --jq .login)"
 TARGET="/workspaces/informatica-2627-${LOGIN}"
 START_PAGE="${TARGET}/.onc/START_HIER.md"
